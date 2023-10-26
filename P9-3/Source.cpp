@@ -81,3 +81,13 @@ void displayRun(const int* values, int size) {
 		}
 	}
 }
+bool hasRun(const int* values, int size) {
+	const int* p = values;
+	for (int i = 0; i < size - 1; i++) {
+		if (*p == *(p + 1)) {
+			return true;
+		}
+		p++;
+	}
+	return false;
+}
